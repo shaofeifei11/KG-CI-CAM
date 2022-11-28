@@ -6,7 +6,7 @@ python -u baseline_test_center_crop.py --gpu 0 --model_path save_model/cub_bz_6_
 #localization top 5 accuracy:  0.759233690024163
 #gt localization accuracy:  0.8020365895754229
 
-# todo table 1 inceptionV3 CI-CAM 106   6
+# todo table 1 inceptionV3 CI-CAM 106 6
 python -u test_center_crop.py --gpu 0 --model_path save_model/cub_bz_6_bkB_inceptionV3_bkR_0.6_dcE_50_dcR_0.5_func_quadratic_mN_20_sgT_0.3_CipS_350_CT_15.0_LipS_350_LT_15.0_kd_3_kdA_0.0_kdFLs_1_kdFTs_1.0_kdFZo_1_lr_0.0001_dn_0_uR_0.02_Cmin_0.2_Cmax_1.0_Lmin_0.1_Lmax_1.0_randAug_5_clsTea_3_locTea_2_dist_none_atten_1/2022-09-21_01_01_29/net_train_inceptionV3_cub_90.pth --attention 1 --distillation none --clsTea 3 --locTea 2 --randAug 5 --cls_min_scale 0.2 --loc_min_scale 0.1 --kd_mode 3 --kd_fe_loss 1 --kd_fe_zero 1 --kd_fe_times 1.0 --kd_alpha 0.0 --cls_teacher_T 15 --loc_teacher_T 15 --decay_epoch 50 --backbone inceptionV3 --backbone_rate 0.6 --dataset cub --lr 0.0001 --seg_thr 0.21 --cls_teacher_input_size 500 --loc_teacher_input_size 500 > log/table_1_cub_incep_ci-cam_segThr_0.21_6.txt 2>&1 &
 #classification top 1 accuracy:  0.7865032792544011
 #classification top 5 accuracy:  0.9458060062133241
