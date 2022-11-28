@@ -1,0 +1,5 @@
+# inceptionV3 cub
+# using cls_teacher + gt_known loc_teacher
+python -u train_student_randomresizecrop.py --gpu 0 --update_rate 0.015 --attention 1 --distillation random --clsTea 3 --locTea 2 --randAug 5 --cls_min_scale 0.2 --loc_min_scale 0.1 --kd_mode 3 --kd_fe_loss 1 --kd_fe_zero 1 --kd_fe_times 1.0 --kd_alpha 0.8 --cls_teacher_T 15 --loc_teacher_T 15 --seg_thr 0.3 --decay_epoch 50 --backbone inceptionV3 --backbone_rate 0.6 --dataset cub --lr 0.0001 --cls_teacher_input_size 350 --loc_teacher_input_size 350 >> log/train_kd_incep_kd_4.txt 2>&1 &
+# using cls_teacher + top-1 loc_teacher
+python -u train_student_randomresizecrop.py --gpu 1 --clsTea 3 --locTea 3 --randAug 5 --cls_min_scale 0.2 --loc_min_scale 0.1 --kd_mode 3 --kd_fe_loss 1 --kd_fe_zero 1 --kd_fe_times 1.0 --kd_alpha 0.8 --cls_teacher_T 15 --loc_teacher_T 15 --seg_thr 0.3 --decay_epoch 50 --backbone inceptionV3 --backbone_rate 0.6 --dataset cub --lr 0.0001 --cls_teacher_input_size 350 --loc_teacher_input_size 350 >> log/train_kd_incep_kd_2.txt 2>&1 &
