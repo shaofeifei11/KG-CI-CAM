@@ -27,3 +27,7 @@ table*.sh
 
 # Note
 Because the training code does not use the best seg_thr and resize values, we unified our test code in the KD-CI-CAM-student/table*.sh using the best seg_thr and resize values.  
+
+# Install
+## 1. randaugment
+`pip install git+https://github.com/ildoonet/pytorch-randaugment`
