@@ -31,3 +31,6 @@ Because the training code does not use the best seg_thr and resize values, we un
 # Install
 ## 1. randaugment
 `pip install git+https://github.com/ildoonet/pytorch-randaugment`
+
+# Model weights
+https://drive.google.com/file/d/1pZwzuCsn6JerqGazG3teDDqXDVPlwyvy/view?usp=share_link
