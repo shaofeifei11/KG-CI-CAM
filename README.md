@@ -34,3 +34,9 @@ Because the training code does not use the best seg_thr and resize values, we un
 
 # Model weights
 https://drive.google.com/file/d/1pZwzuCsn6JerqGazG3teDDqXDVPlwyvy/view?usp=share_link
+
+# Datasets
+## CUB-200-2011
+http://www.vision.caltech.edu/datasets/cub_200_2011/
+## ILSVRC 2016 val set
+https://image-net.org/challenges/LSVRC/2016/#loc
