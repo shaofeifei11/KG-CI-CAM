@@ -1,4 +1,6 @@
 # KD-CI-CAM
+This project is the code of "Further Improving Weakly-supervised Object Localization via Causal Knowledge Distillation".
+![image](https://user-images.githubusercontent.com/50863459/225069343-8f194e35-664f-4288-881a-38c7c1aebfae.png)
 
 ## KD-CI-CAM-teacher
 ### training
