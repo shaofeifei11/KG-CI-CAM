@@ -14,13 +14,15 @@ python -u test_center_crop.py --gpu 0 --model_path save_model/imagenet_bz_80_bkB
 #localization top 5 accuracy:  0.59404
 #gt localization accuracy:  0.63636
 
-# todo table 2 vgg16 KD-CI-CAM 104
-python -u test_center_crop.py --gpu 0 --model_path save_model/imagenet_bz_48_bkB_vgg16_bkR_1.0_dcE_10_dcR_0.1_func_sum_1_mN_20_sgT_0.0_CipS_240_CT_2.0_LipS_240_LT_2.0_kd_3_kdA_0.8_kdFLs_1_kdFTs_1.0_kdFZo_1_lr_7.8e-05_dn_0_uR_0.001_Cmin_0.4_Cmax_1.0_Lmin_0.9_Lmax_1.1_randAug_0_clsTea_0_locTea_2/2022-07-30_13_26_49/net_train_vgg16_imagenet_20.pth  --locTea 2 --cls_min_scale 0.4 --cls_max_scale 1.0 --loc_min_scale 0.9 --loc_max_scale 1.1 --kd_fe_loss 1 --kd_fe_zero 1 --kd_fe_times 1.0 --kd_alpha 0.8 --cls_teacher_T 2 --loc_teacher_T 2 --danet 0 --batch_size 48 --lr 0.000078 --epoch 20 --decay_epoch 10 --decay_rate 0.1 --backbone_rate 1.0 --update_rate 0.001 --backbone vgg16 --dataset imagenet --function sum_1 --mean_num 20 --seg_thr 0.11 --cls_teacher_input_size 288 --loc_teacher_input_size 288 >> log/test_center_crop_imagenet_sota_19.txt 2>&1 &
-#classification top 1 accuracy:  0.72512
-#classification top 5 accuracy:  0.90602
-#localization top 1 accuracy:  0.5115
-#localization top 5 accuracy:  0.62058
-#gt localization accuracy:  0.66342
+# todo table 2 vgg16 KD-CI-CAM 102
+python -u test_center_crop.py --gpu 1 --model_path save_model/imagenet_78_vgg16_1.0_EP_20_dcE_10_dcR_0.1_func_sum_1_mN_20_sgT_0.11_CipS_288_CT_1.1_LipS_288_LT_1.1_kdA_0.8_kdFLs_1_kdFTs_1.0_kdFZo_1_lr_8e-05_dn_0_uR_0.001_Cmin_0.4_Cmax_1.0_Lmin_0.9_Lmax_1.1_rAug_0_cTea_0_lTea_2_dist_random_att_1_LG_1_IPC_0.1/2023-09-25_00_16_42/net_train_vgg16_imagenet_16.pth --danet 0 --locTea 2 --cls_min_scale 0.4 --cls_max_scale 1.0 --loc_min_scale 0.9 --loc_max_scale 1.1 --kd_fe_loss 1 --kd_fe_zero 1 --kd_fe_times 1.0 --kd_alpha 0.8 --cls_teacher_T 1.1 --loc_teacher_T 1.1 --danet 0 --batch_size 78 --lr 0.00008 --epoch 20 --decay_epoch 10 --decay_rate 0.1 --backbone_rate 1.0 --update_rate 0.001 --backbone vgg16 --dataset imagenet --function sum_1 --mean_num 20 --seg_thr 0.11 --cls_teacher_input_size 288 --loc_teacher_input_size 288  >> log/test_vgg16_imagenet_288.txt 2>&1 &
+# seg_thr_i=  0.11 288
+Inference Results:
+classification top 1 accuracy:  0.72358
+classification top 5 accuracy:  0.9032
+localization top 1 accuracy:  0.51354
+localization top 5 accuracy:  0.62276
+gt localization accuracy:  0.67392
 
 # todo table 5 VGG16 Imagenet stu+cls 104
 python -u test_center_crop.py --gpu 1 --model_path save_model/imagenet_bz_80_bkB_vgg16_bkR_1.0_dcE_10_dcR_0.1_func_sum_1_mN_20_sgT_0.1_CipS_240_CT_2.0_LipS_240_LT_2.0_kd_3_kdA_0.8_kdFLs_1_kdFTs_1.0_kdFZo_1_lr_0.00013_dn_0_uR_0.001_Cmin_0.4_Cmax_1.0_Lmin_0.9_Lmax_1.1_randAug_0_clsTea_1_locTea_2_dist_cls_atten_1/2022-09-06_20_49_46/net_train_vgg16_imagenet_20.pth --distillation cls --clsTea 1 --locTea 2 --cls_min_scale 0.4 --cls_max_scale 1.0 --loc_min_scale 0.9 --loc_max_scale 1.1 --kd_fe_loss 1 --kd_fe_zero 1 --kd_fe_times 1.0 --kd_alpha 0.8 --cls_teacher_T 2 --loc_teacher_T 2 --danet 0 --batch_size 80 --lr 0.00013 --epoch 20 --decay_epoch 10 --decay_rate 0.1 --backbone_rate 1.0 --update_rate 0.001 --backbone vgg16 --dataset imagenet --function sum_1 --mean_num 20 --seg_thr 0.11 --cls_teacher_input_size 288 --loc_teacher_input_size 288 >> log/table_5_imagenet_vgg16_stu_cls.txt 2>&1 &
