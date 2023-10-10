@@ -1,6 +1,7 @@
-# KD-CI-CAM
-This project is the code of the paper "Further Improving Weakly-supervised Object Localization via Causal Knowledge Distillation".
-![image](https://user-images.githubusercontent.com/50863459/225069343-8f194e35-664f-4288-881a-38c7c1aebfae.png)
+# KG-CI-CAM
+This project is the code of the paper "Knowledge-guided Causal Intervention for Weakly-supervised Object Localization".
+![1696916298299](https://github.com/shaofeifei11/KG-CI-CAM/assets/50863459/58533b17-520a-4e63-a8df-d76c354cd853)
+
 
 ## KD-CI-CAM-teacher
 ### training
